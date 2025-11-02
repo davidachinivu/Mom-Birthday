@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezi ụbọchị ọmụmụ Nne!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(ellipse at center, #fecaca, #fecaca 0%, #dc2626 40%, #991b1b 90%);
+        }
+
+        .font-script {
+            font-family: 'Great 'Vibes', cursive;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out forwards;
+        }
+
+        @keyframes shimmer {
+            0% {
+                text-shadow: -2px -2px 10px #fff, 2px 2px 10px #fff, 0 0 20px #dc2626;
+            }
+            50% {
+                text-shadow: -2px -2px 10px #fff, 2px 2px 10px #fff, 0 0 35px #fecaca;
+            }
+            100% {
+                text-shadow: -2px -2px 10px #fff, 2px 2px 10px #fff, 0 0 20px #dc2626;
+            }
+        }
+
+        .shiny-title {
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(239, 68, 68, 0.9);
+            }
+        }
+
+        #next-button {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.7;
+            }
+        }
+
+        .heart {
+            animation: floatHeart 4s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            user-select: none; 
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 md:py-12 relative">
+
+    <span class="heart" style="position: absolute; top: 10%; left: 10%; font-size: 2rem; color: #ef4444;">&hearts;</span>
+    <span class="heart" style="position: absolute; top: 20%; right: 15%; font-size: 1.5rem; color: #ef4444; animation-delay: -1s;">&hearts;</span>
+    <span class="heart" style="position: absolute; bottom: 15%; left: 20%; font-size: 1.8rem; color: #ef4444; animation-delay: -2.5s;">&hearts;</span>
+    <span class="heart" style="position: absolute; bottom: 30%; right: 10%; font-size: 2.2rem; color: #ef4444; animation-delay: -0.5s;">&hearts;</span>
+    <span class="heart" style="position: absolute; top: 50%; left: 5%; font-size: 1.2rem; color: #ef4444; animation-delay: -1.8s;">&hearts;</span>
+    <span class="heart" style="position: absolute; top: 60%; right: 8%; font-size: 1.7rem; color: #ef4444; animation-delay: -3s;">&hearts;</span>
+    <span class="heart" style="position: absolute; top: 80%; left: 12%; font-size: 2.1rem; color: #ef4444; animation-delay: -2s;">&hearts;</span>
+    <span class="heart" style="position: absolute; top: 30%; left: 25%; font-size: 1.3rem; color: #ef4444; animation-delay: -3.5s;">&hearts;</span>
+    <span class="heart" style="position: absolute; top: 45%; right: 25%; font-size: 1.9rem; color: #ef4444; animation-delay: -1.2s;">&hearts;</span>
+
+
+    <div class="w-full max-w-lg bg-white/90 p-8 md:p-12 rounded-2xl shadow-2xl text-center backdrop-blur-sm border-2 border-white/50 z-10">
+        
+        <h1 class="font-script text-6xl md:text-7xl text-red-900 mb-6 shiny-title">
+            Ezi ụbọchị ọmụmụ <b>Nne!</b>
+        </h1>
+        
+        <div id="message-container" class="min-h-[120px] flex items-center justify-center mb-8">
+            <p id="message" class="text-xl md:text-2xl text-gray-700 font-medium">
+                I love you so much. Here are just a few reasons why...
+            </p>
+        </div>
+
+        <button id="next-button" class="bg-gradient-to-r from-red-400 to-red-600 text-red-100 font-bold py-3 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-red-300">
+            Click to see!
+        </button>
+
+        <div id="gallery-container" class="hidden opacity-0 transition-opacity duration-1000 mt-12">
+            <h2 class="font-script text-4xl md:text-5xl text-red-800 mb-6 shiny-title">
+                Our Memories
+            </h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                
+                <img src="images\IMG_0375.jpeg" alt="A photo with mom" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
+                
+                <img src="images\DE6795C0-F440-4F01-873A-701D45126F0A.jpeg" alt="A family photo" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
+                
+                <img src="images\IMG_1764.JPG" alt="A happy moment" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
+                
+                <img src="images\IMG_2943.jpeg" alt="A vacation photo" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
+                
+                <img src="images\IMG_3213.JPG" alt="A birthday photo" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
+                
+                <img src="images\IMG_4136.JPG" alt="A photo of you and mom" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
+            </div>
+            <p class="mt-4 text-gray-600 text-sm italic">Just a few of my favorite moments with you!</p>
+        </div>
+
+    </div>
+
+    <script>
+        const reasons = [
+            "Loving me unconditionally, no matter what.",
+            "How you always know how to make me laugh.",
+            "Your unconditional support and belief in me.",
+            "The way you always tell me the truth.",
+            "The way you sing and worship with such joy.",
+            "Your incredible strength and resilience.",
+            "How you carry yourself with dignity, faith, and love.",
+            "Your kindness and joy you bring.",
+            "The way you pray for me, even when I don’t know it.",
+            "How you raised me with discipline, love, and respect.",
+            "Basically... I love EVERYTHING about you! ❤️"
+        ];
+
+        let currentIndex = -1; 
+        const messageElement = document.getElementById('message');
+        const nextButton = document.getElementById('next-button');
+        const galleryContainer = document.getElementById('gallery-container'); // Get the gallery
+
+        function showNextReason() {
+            currentIndex++;
+            
+            if (currentIndex >= reasons.length - 1) {
+                messageElement.textContent = reasons[reasons.length - 1];
+                
+                nextButton.textContent = "Have the best day!";
+                nextButton.disabled = true;
+                nextButton.style.animation = 'none'; // Stop pulsing
+                nextButton.style.opacity = '0.8'; 
+
+                galleryContainer.classList.remove('hidden');
+
+                void galleryContainer.offsetWidth;
+
+                galleryContainer.classList.add('opacity-100');
+
+            } else {
+
+                messageElement.textContent = reasons[currentIndex];
+                
+                nextButton.textContent = "Click for the next reason!";
+                
+                if (currentIndex === reasons.length - 2) {
+                    nextButton.textContent = "And the biggest reason...";
+                }
+            }
+
+            messageElement.classList.remove('fade-in');
+
+            void messageElement.offsetWidth;
+
+            messageElement.classList.add('fade-in');
+        }
+
+        nextButton.addEventListener('click', showNextReason);
+    </script>
+
+</body>
+</html>
+
+
+
+
