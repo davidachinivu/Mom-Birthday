@@ -14,7 +14,7 @@
         }
 
         .font-script {
-            font-family: 'Great 'Vibes', cursive;
+            font-family: 'Great Vibes', cursive;
         }
 
         @keyframes fadeIn {
@@ -83,8 +83,9 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4 md:py-12 relative">
+<body class="min-h-screen flex items-center justify-center p-4 md:py-12 pb-20 relative">
 
+    <!-- Floating hearts -->
     <span class="heart" style="position: absolute; top: 10%; left: 10%; font-size: 2rem; color: #ef4444;">&hearts;</span>
     <span class="heart" style="position: absolute; top: 20%; right: 15%; font-size: 1.5rem; color: #ef4444; animation-delay: -1s;">&hearts;</span>
     <span class="heart" style="position: absolute; bottom: 15%; left: 20%; font-size: 1.8rem; color: #ef4444; animation-delay: -2.5s;">&hearts;</span>
@@ -95,7 +96,7 @@
     <span class="heart" style="position: absolute; top: 30%; left: 25%; font-size: 1.3rem; color: #ef4444; animation-delay: -3.5s;">&hearts;</span>
     <span class="heart" style="position: absolute; top: 45%; right: 25%; font-size: 1.9rem; color: #ef4444; animation-delay: -1.2s;">&hearts;</span>
 
-
+    <!-- Main container -->
     <div class="w-full max-w-lg bg-white/90 p-8 md:p-12 rounded-2xl shadow-2xl text-center backdrop-blur-sm border-2 border-white/50 z-10">
         
         <h1 class="font-script text-6xl md:text-7xl text-red-900 mb-6 shiny-title">
@@ -118,17 +119,12 @@
             </h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 
-                <img src="images\IMG_0375.jpeg" alt="A photo with mom" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
-                
-                <img src="images\DE6795C0-F440-4F01-873A-701D45126F0A.jpeg" alt="A family photo" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
-                
-                <img src="images\IMG_1764.JPG" alt="A happy moment" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
-                
-                <img src="images\IMG_2943.jpeg" alt="A vacation photo" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
-                
-                <img src="images\IMG_3213.JPG" alt="A birthday photo" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
-                
-                <img src="images\IMG_4136.JPG" alt="A photo of you and mom" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
+                <img src="images/IMG_0375.jpeg" alt="A photo with mom" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
+                <img src="images/DE6795C0-F440-4F01-873A-701D45126F0A.jpeg" alt="A family photo" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
+                <img src="images/IMG_1764.JPG" alt="A happy moment" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
+                <img src="images/IMG_2943.jpeg" alt="A vacation photo" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
+                <img src="images/IMG_3213.JPG" alt="A birthday photo" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
+                <img src="images/IMG_4136.JPG" alt="A photo of you and mom" class="rounded-lg shadow-md w-full h-full aspect-square object-cover border-2 border-white transition-transform duration-300 hover:scale-105">
             </div>
             <p class="mt-4 text-gray-600 text-sm italic">Just a few of my favorite moments with you!</p>
         </div>
@@ -153,7 +149,7 @@
         let currentIndex = -1; 
         const messageElement = document.getElementById('message');
         const nextButton = document.getElementById('next-button');
-        const galleryContainer = document.getElementById('gallery-container'); // Get the gallery
+        const galleryContainer = document.getElementById('gallery-container'); 
 
         function showNextReason() {
             currentIndex++;
@@ -163,19 +159,16 @@
                 
                 nextButton.textContent = "Have the best day!";
                 nextButton.disabled = true;
-                nextButton.style.animation = 'none'; // Stop pulsing
+                nextButton.style.animation = 'none'; 
                 nextButton.style.opacity = '0.8'; 
 
                 galleryContainer.classList.remove('hidden');
-
                 void galleryContainer.offsetWidth;
-
                 galleryContainer.classList.add('opacity-100');
 
             } else {
 
                 messageElement.textContent = reasons[currentIndex];
-                
                 nextButton.textContent = "Click for the next reason!";
                 
                 if (currentIndex === reasons.length - 2) {
@@ -184,9 +177,7 @@
             }
 
             messageElement.classList.remove('fade-in');
-
             void messageElement.offsetWidth;
-
             messageElement.classList.add('fade-in');
         }
 
@@ -195,7 +186,3 @@
 
 </body>
 </html>
-
-
-
-
